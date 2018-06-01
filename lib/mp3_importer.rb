@@ -14,7 +14,7 @@ class MP3Importer
     #   array.push(file.match(/[A-Z].*/))
     # end
     # array
-    @files ||= Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
+    @files = Dir.glob("#{path}/*.mp3").collect{ |f| f.gsub("#{path}/", "") }
   end
 
   def import
