@@ -18,6 +18,7 @@ class Artist
 
   def save
    @@all.push(self)
+   @@all.uniq!
 
   end
 
