@@ -7,6 +7,8 @@ class MP3Importer
 
 
 
+
+
   def files
     # files = Dir[@path.concat("/*.mp3")]
     # array = []
@@ -18,19 +20,22 @@ class MP3Importer
   end
 
   def import
-    files.each{ |file| Song.new_by_filename(file) }
+    self.files.each{ |file| Song.new_by_filename(file) }
 
   end
 
 end
 
-# './db/mp3s'
-#
-# files = Dir['./db/mp3s/*.mp3']
-# array = []
-# files.each do |file|
-#   array.push(file.match(/[A-Z].*/))
-# end
-# array
-#
-# file1.match(/[A-Z].*/)
+
+importer = MP3Importer.new('./db/mp3s')
+importer.files
+'./db/mp3s'
+
+files = Dir['./db/mp3s/*.mp3']
+array = []
+files.each do |file|
+  array.push(file.match(/[A-Z].*/))
+end
+array
+
+file1.match(/[A-Z].*/)

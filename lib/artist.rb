@@ -17,7 +17,8 @@ class Artist
   end
 
   def save
-    @@all.push(self)
+   @@all.push(self)
+
   end
 
   def self.find_or_create_by_name(name)
@@ -46,6 +47,8 @@ class Artist
 
 
 end
+
+Artist.find_or_create_by_name("Washed Out")
 
 # johnny_greenwood = Artist.new("Johnny Greenwood")
 # johnny_greenwood.save
