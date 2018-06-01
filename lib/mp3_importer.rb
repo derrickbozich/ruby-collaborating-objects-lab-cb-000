@@ -27,15 +27,15 @@ class MP3Importer
 end
 
 
-importer = MP3Importer.new('./db/mp3s')
-importer.files
-'./db/mp3s'
-
-files = Dir['./db/mp3s/*.mp3']
-array = []
-files.each do |file|
-  array.push(file.match(/[A-Z].*/))
-end
-array
-
-file1.match(/[A-Z].*/)
+# importer = MP3Importer.new('./db/mp3s')
+# importer.files
+# './db/mp3s'
+# 
+# files = Dir['./db/mp3s/*.mp3']
+# array = []
+# files.each do |file|
+#   array.push(file.match(/[A-Z].*/))
+# end
+# array
+# 
+# file1.match(/[A-Z].*/)
